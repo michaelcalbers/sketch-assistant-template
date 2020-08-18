@@ -2,20 +2,20 @@ import { AssistantPackage, RuleDefinition } from '@sketch-hq/sketch-assistant-ty
 
 const helloWorld: RuleDefinition = {
   rule: async (context) => {
-    context.utils.report('Hello world')
+    context.utils.report('Hello Mike')
   },
-  name: 'sketch-assistant-template/hello-world',
-  title: 'Hello World',
-  description: 'Reports a hello world message',
+  name: 'mca-sketch-assistant-experiment/hello-world',
+  title: 'Hello there Mike',
+  description: 'Reports a hello mike message',
 }
 
 const assistant: AssistantPackage = async () => {
   return {
-    name: 'sketch-assistant-template',
+    name: 'mca-sketch-assistant-experiment',
     rules: [helloWorld],
     config: {
       rules: {
-        'sketch-assistant-template/hello-world': { active: true },
+        'mca-sketch-assistant-experiment/hello-world': { active: true },
       },
     },
   }
